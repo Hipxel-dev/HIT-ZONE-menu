@@ -1,0 +1,668 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://art/fonts/UAV-OSD-Mono.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://game/ui/components/mouse_detect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/ui/main_menu/scripts/main_menu.gd" type="Script" id=3]
+[ext_resource path="res://game/ui/main_menu/scripts/whoosh.gd" type="Script" id=4]
+[ext_resource path="res://art/fonts/picotron.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://game/ui/main_menu/scripts/main.gd" type="Script" id=6]
+[ext_resource path="res://game/ui/main_menu/scripts/options.gd" type="Script" id=7]
+[ext_resource path="res://game/ui/main_menu/scripts/play.gd" type="Script" id=8]
+[ext_resource path="res://shaders/stripes.tres" type="Shader" id=9]
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 9 )
+shader_param/color_gap = Color( 0.176471, 0.117647, 0.215686, 1 )
+shader_param/color_stripe = Color( 0.12549, 0.0705882, 0.164706, 1 )
+shader_param/divisions = 16.0
+shader_param/stripe_bias = 2.0
+shader_param/speed = 0.01
+shader_param/angle = 0.7854
+shader_param/skew = 0.0
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+outline_color = Color( 0, 0.152941, 0.509804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 8
+font_data = ExtResource( 5 )
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="bg2" type="ColorRect" parent="."]
+show_behind_parent = true
+material = SubResource( 8 )
+margin_left = -329.0
+margin_top = -362.0
+margin_right = 1119.0
+margin_bottom = 943.0
+color = Color( 0.117647, 0.141176, 0.180392, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg" type="Node2D" parent="."]
+position = Vector2( 1, 26 )
+script = ExtResource( 4 )
+
+[node name="ColorRect7" type="ColorRect" parent="bg"]
+margin_left = -31.153
+margin_top = 52.0
+margin_right = 867.847
+margin_bottom = 63.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 0.584314 )
+
+[node name="random_shit_below" type="ColorRect" parent="bg"]
+margin_left = 186.0
+margin_top = 54.0
+margin_right = 226.0
+margin_bottom = 94.0
+rect_rotation = 15.0
+
+[node name="rndm_sht" type="ColorRect" parent="bg"]
+margin_left = 162.0
+margin_top = -143.0
+margin_right = 175.0
+margin_bottom = 389.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht2" type="ColorRect" parent="bg"]
+margin_left = 154.0
+margin_top = -147.0
+margin_right = 161.0
+margin_bottom = 385.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht3" type="ColorRect" parent="bg"]
+margin_left = 116.0
+margin_top = 101.0
+margin_right = 117.0
+margin_bottom = 153.0
+rect_rotation = -75.0
+
+[node name="rndm_sht4" type="ColorRect" parent="bg"]
+margin_left = 167.0
+margin_top = 115.0
+margin_right = 168.0
+margin_bottom = 167.0
+rect_rotation = -75.0
+
+[node name="rndm_sht5" type="ColorRect" parent="bg"]
+margin_left = 116.0
+margin_top = 101.0
+margin_right = 117.0
+margin_bottom = 153.0
+rect_rotation = 15.0
+
+[node name="rndm_sht6" type="ColorRect" parent="bg"]
+margin_left = 219.0
+margin_top = 129.0
+margin_right = 220.0
+margin_bottom = 181.0
+rect_rotation = -75.0
+
+[node name="rndm_sht7" type="ColorRect" parent="bg"]
+margin_left = 271.0
+margin_top = 143.0
+margin_right = 272.0
+margin_bottom = 195.0
+rect_rotation = -75.0
+
+[node name="rndm_sht8" type="ColorRect" parent="bg"]
+margin_left = 115.0
+margin_top = 112.0
+margin_right = 125.0
+margin_bottom = 122.0
+rect_rotation = -75.0
+
+[node name="rndm_sht9" type="ColorRect" parent="bg"]
+margin_left = 126.0
+margin_top = 115.0
+margin_right = 136.0
+margin_bottom = 185.0
+rect_rotation = -75.0
+
+[node name="rndm_sht12" type="ColorRect" parent="bg"]
+margin_left = 127.0
+margin_top = 112.0
+margin_right = 130.0
+margin_bottom = 445.0
+rect_rotation = -75.0
+
+[node name="rndm_sht13" type="ColorRect" parent="bg"]
+margin_left = 127.0
+margin_top = 112.0
+margin_right = 130.0
+margin_bottom = 445.0
+rect_rotation = -75.0
+
+[node name="rndm_sht10" type="ColorRect" parent="bg"]
+margin_left = 128.0
+margin_top = 114.0
+margin_right = 135.0
+margin_bottom = 174.0
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht11" type="ColorRect" parent="bg"]
+margin_left = 112.0
+margin_top = 118.0
+margin_right = 119.0
+margin_bottom = 178.0
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="random_shit_above" type="ColorRect" parent="bg"]
+margin_left = 186.0
+margin_top = 54.0
+margin_right = 226.0
+margin_bottom = 94.0
+rect_rotation = 15.0
+
+[node name="ColorRect14" type="ColorRect" parent="bg"]
+margin_left = 33.0
+margin_top = 396.0
+margin_right = 932.0
+margin_bottom = 398.0
+rect_rotation = -75.0
+
+[node name="ColorRect13" type="ColorRect" parent="bg"]
+margin_left = 349.0
+margin_top = 128.0
+margin_right = 520.0
+margin_bottom = 160.0
+rect_rotation = 15.0
+
+[node name="ColorRect6" type="ColorRect" parent="bg"]
+margin_left = 281.0
+margin_top = 112.0
+margin_right = 519.0
+margin_bottom = 141.0
+rect_rotation = 15.0
+color = Color( 0, 0.552941, 1, 1 )
+
+[node name="ColorRect9" type="ColorRect" parent="bg"]
+margin_left = 295.847
+margin_top = 116.0
+margin_right = 304.847
+margin_bottom = 145.0
+rect_rotation = 15.0
+color = Color( 0, 0.717647, 1, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="bg"]
+margin_left = 136.0
+margin_top = 38.0
+margin_right = 365.0
+margin_bottom = 101.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht17" type="ColorRect" parent="bg"]
+margin_left = 129.0
+margin_top = 51.0
+margin_right = 149.0
+margin_bottom = 70.0
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht18" type="ColorRect" parent="bg"]
+margin_left = 132.0
+margin_top = 49.0
+margin_right = 147.0
+margin_bottom = 63.0
+rect_rotation = -75.0
+
+[node name="ColorRect12" type="ColorRect" parent="bg"]
+margin_left = 139.0
+margin_top = 43.0
+margin_right = 359.0
+margin_bottom = 102.0
+rect_rotation = 15.0
+color = Color( 0, 0.552941, 1, 1 )
+
+[node name="ColorRect10" type="ColorRect" parent="bg"]
+margin_left = 89.541
+margin_top = 51.0
+margin_right = 121.541
+margin_bottom = 84.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+margin_left = 91.541
+margin_top = 54.0
+margin_right = 118.541
+margin_bottom = 82.0
+rect_rotation = 15.0
+color = Color( 0, 0.552941, 1, 1 )
+
+[node name="ColorRect8" type="ColorRect" parent="bg"]
+margin_left = 141.0
+margin_top = 47.0
+margin_right = 355.0
+margin_bottom = 97.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht14" type="ColorRect" parent="bg"]
+margin_left = 88.0
+margin_top = 111.0
+margin_right = 129.0
+margin_bottom = 155.0
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht19" type="ColorRect" parent="bg"]
+margin_left = 85.0
+margin_top = 84.3185
+margin_right = 105.0
+margin_bottom = 103.319
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht20" type="ColorRect" parent="bg"]
+margin_left = 88.0
+margin_top = 82.3185
+margin_right = 103.0
+margin_bottom = 96.3185
+rect_rotation = -75.0
+
+[node name="rndm_sht21" type="ColorRect" parent="bg"]
+margin_left = 96.0
+margin_top = 79.3185
+margin_right = 116.0
+margin_bottom = 98.3185
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht22" type="ColorRect" parent="bg"]
+margin_left = 99.0
+margin_top = 77.3185
+margin_right = 114.0
+margin_bottom = 91.3185
+rect_rotation = -75.0
+
+[node name="rndm_sht23" type="ColorRect" parent="bg"]
+margin_left = 97.0
+margin_top = 122.319
+margin_right = 117.0
+margin_bottom = 141.319
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht24" type="ColorRect" parent="bg"]
+margin_left = 100.0
+margin_top = 120.319
+margin_right = 115.0
+margin_bottom = 134.319
+rect_rotation = -75.0
+
+[node name="rndm_sht29" type="ColorRect" parent="bg"]
+margin_left = 91.0
+margin_top = 149.319
+margin_right = 111.0
+margin_bottom = 168.319
+rect_rotation = -75.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rndm_sht30" type="ColorRect" parent="bg"]
+margin_left = 94.0
+margin_top = 147.319
+margin_right = 109.0
+margin_bottom = 161.319
+rect_rotation = -75.0
+
+[node name="ColorRect15" type="ColorRect" parent="bg"]
+margin_left = 513.0
+margin_top = 195.0
+margin_right = 542.0
+margin_bottom = 200.0
+rect_rotation = 15.0
+
+[node name="ColorRect18" type="ColorRect" parent="bg"]
+margin_left = 511.0
+margin_top = 166.0
+margin_right = 520.0
+margin_bottom = 175.0
+rect_rotation = 15.0
+
+[node name="ColorRect19" type="ColorRect" parent="bg"]
+margin_left = 511.0
+margin_top = 166.0
+margin_right = 520.0
+margin_bottom = 175.0
+rect_rotation = 15.0
+
+[node name="ColorRect20" type="ColorRect" parent="bg"]
+margin_left = 511.0
+margin_top = 166.0
+margin_right = 520.0
+margin_bottom = 175.0
+rect_rotation = 15.0
+
+[node name="ColorRect21" type="ColorRect" parent="bg"]
+margin_left = 511.0
+margin_top = 166.0
+margin_right = 520.0
+margin_bottom = 175.0
+rect_rotation = 15.0
+
+[node name="ColorRect22" type="ColorRect" parent="bg"]
+margin_left = 511.0
+margin_top = 166.0
+margin_right = 520.0
+margin_bottom = 175.0
+rect_rotation = 15.0
+
+[node name="ColorRect23" type="ColorRect" parent="bg"]
+margin_left = 351.0
+margin_top = 120.0
+margin_right = 360.0
+margin_bottom = 129.0
+rect_rotation = 15.0
+
+[node name="Label" type="Label" parent="bg"]
+margin_left = 147.0
+margin_top = 61.0
+margin_right = 347.0
+margin_bottom = 93.0
+rect_rotation = 15.0
+custom_fonts/font = SubResource( 5 )
+text = "hit-zone"
+
+[node name="Label2" type="Label" parent="bg"]
+margin_left = 154.0
+margin_top = 141.0
+margin_right = 354.0
+margin_bottom = 173.0
+rect_rotation = 15.0
+custom_fonts/font = SubResource( 6 )
+text = "PRESS ANY KEY"
+
+[node name="ColorRect31" type="ColorRect" parent="bg/Label2"]
+show_behind_parent = true
+margin_left = -8.83205
+margin_top = -5.9157
+margin_right = 162.168
+margin_bottom = 19.0843
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect32" type="ColorRect" parent="bg/Label2"]
+show_behind_parent = true
+margin_left = -8.41592
+margin_top = 18.8195
+margin_right = 162.584
+margin_bottom = 20.8195
+
+[node name="Label3" type="Label" parent="bg"]
+margin_left = 43.0
+margin_top = 292.0
+margin_right = 243.0
+margin_bottom = 300.0
+rect_rotation = -75.0
+custom_fonts/font = SubResource( 7 )
+text = "Hipxel 2024"
+
+[node name="ColorRect24" type="ColorRect" parent="bg"]
+margin_left = 145.0
+margin_top = 29.0
+margin_right = 154.0
+margin_bottom = 38.0
+rect_rotation = 15.0
+
+[node name="ColorRect25" type="ColorRect" parent="bg"]
+margin_left = 89.0
+margin_top = 68.0
+margin_right = 98.0
+margin_bottom = 77.0
+rect_rotation = 15.0
+
+[node name="ColorRect26" type="ColorRect" parent="bg"]
+margin_left = 89.0
+margin_top = 97.0
+margin_right = 98.0
+margin_bottom = 106.0
+rect_rotation = 15.0
+
+[node name="ColorRect27" type="ColorRect" parent="bg"]
+margin_left = 91.0
+margin_top = 93.0
+margin_right = 100.0
+margin_bottom = 102.0
+rect_rotation = 15.0
+
+[node name="ColorRect28" type="ColorRect" parent="bg"]
+margin_left = 106.0
+margin_top = 109.0
+margin_right = 115.0
+margin_bottom = 118.0
+rect_rotation = 15.0
+
+[node name="ColorRect29" type="ColorRect" parent="bg"]
+margin_left = 111.0
+margin_top = 89.0
+margin_right = 120.0
+margin_bottom = 98.0
+rect_rotation = 15.0
+
+[node name="ColorRect30" type="ColorRect" parent="bg"]
+margin_left = 131.0
+margin_top = 99.0
+margin_right = 140.0
+margin_bottom = 108.0
+rect_rotation = 15.0
+
+[node name="ColorRect16" type="ColorRect" parent="bg"]
+margin_left = 571.0
+margin_top = 211.0
+margin_right = 600.0
+margin_bottom = 216.0
+rect_rotation = 15.0
+
+[node name="ColorRect17" type="ColorRect" parent="bg"]
+margin_left = 542.0
+margin_top = 203.0
+margin_right = 571.0
+margin_bottom = 208.0
+rect_rotation = 15.0
+
+[node name="ColorRect4" type="ColorRect" parent="bg"]
+margin_left = -6.0
+margin_top = 64.0
+margin_right = 782.0
+margin_bottom = 66.0
+rect_rotation = 15.0
+color = Color( 0, 0.552941, 1, 1 )
+
+[node name="rndm_sht16" type="ColorRect" parent="bg"]
+margin_left = 90.0
+margin_top = 111.0
+margin_right = 129.0
+margin_bottom = 150.0
+rect_rotation = -75.0
+color = Color( 0, 0.552941, 1, 1 )
+
+[node name="rndm_sht15" type="ColorRect" parent="bg"]
+margin_left = 94.0
+margin_top = 109.0
+margin_right = 127.0
+margin_bottom = 142.0
+rect_rotation = -75.0
+
+[node name="ColorRect34" type="ColorRect" parent="bg"]
+show_behind_parent = true
+margin_left = 132.0
+margin_top = 36.0
+margin_right = 221.0
+margin_bottom = 130.0
+rect_rotation = 60.0
+color = Color( 0, 0.552941, 1, 0.0666667 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect35" type="ColorRect" parent="bg"]
+show_behind_parent = true
+margin_left = 140.0
+margin_top = 10.0
+margin_right = 267.0
+margin_bottom = 144.0
+rect_rotation = 60.0
+color = Color( 0, 0.552941, 1, 0.0666667 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect36" type="ColorRect" parent="bg"]
+show_behind_parent = true
+margin_left = 150.0
+margin_top = -31.0
+margin_right = 330.0
+margin_bottom = 159.0
+rect_rotation = 60.0
+color = Color( 0, 0.552941, 1, 0.0666667 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="main" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="bg" type="Node2D" parent="main"]
+visible = false
+position = Vector2( 114, 123 )
+
+[node name="ColorRect" type="ColorRect" parent="main/bg"]
+margin_left = -13.2235
+margin_top = -23.4243
+margin_right = 26.7765
+margin_bottom = 16.5757
+rect_rotation = 15.0
+
+[node name="ColorRect2" type="ColorRect" parent="main/bg"]
+visible = false
+margin_left = -584.224
+margin_top = -156.424
+margin_right = 627.776
+margin_bottom = -153.424
+rect_rotation = 15.0
+
+[node name="ColorRect3" type="ColorRect" parent="main/bg"]
+visible = false
+margin_left = -135.224
+margin_top = 536.576
+margin_right = 1076.78
+margin_bottom = 539.576
+rect_rotation = -75.9176
+
+[node name="Label2" type="Label" parent="main/bg"]
+margin_left = 40.0
+margin_top = -19.0
+margin_right = 240.0
+margin_bottom = 13.0
+rect_rotation = 15.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "SECTION:MAIN"
+
+[node name="button" type="Area2D" parent="main"]
+position = Vector2( 188, 251 )
+
+[node name="bg" type="Node2D" parent="main/button"]
+
+[node name="ColorRect9" type="ColorRect" parent="main/button/bg"]
+margin_left = -2.0
+margin_top = -19.0
+margin_right = 120.0
+margin_bottom = 21.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="main/button/bg"]
+margin_top = -16.0
+margin_right = 117.0
+margin_bottom = 18.0
+rect_rotation = 15.0
+
+[node name="ColorRect5" type="ColorRect" parent="main/button/bg"]
+margin_left = 1.0
+margin_top = -15.0
+margin_right = 116.0
+margin_bottom = 17.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="hover" type="ColorRect" parent="main/button/bg"]
+margin_left = 3.0
+margin_top = -12.0
+margin_right = 112.0
+margin_bottom = 15.0
+rect_rotation = 15.0
+
+[node name="ColorRect4" type="ColorRect" parent="main/button/bg"]
+margin_left = -20.3413
+margin_top = -15.0
+margin_right = -2.34126
+margin_bottom = 3.0
+rect_rotation = 15.0
+
+[node name="ColorRect3" type="ColorRect" parent="main/button/bg"]
+margin_left = -19.0
+margin_top = -13.0
+margin_right = -4.0
+margin_bottom = 2.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="text" type="Label" parent="main/button/bg"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 8.0
+margin_top = -4.00003
+margin_right = 208.0
+margin_bottom = 28.0
+rect_rotation = 15.0
+custom_fonts/font = SubResource( 6 )
+text = "text"
+
+[node name="mouse_detect" parent="main/button" instance=ExtResource( 2 )]
+margin_left = -25.0
+margin_top = -27.0
+margin_right = 147.0
+margin_bottom = 16.0
+
+[node name="anchor" type="Node2D" parent="main"]
+position = Vector2( 119, 173 )
+
+[node name="options" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="bg" type="Node2D" parent="options"]
+
+[node name="ColorRect" type="ColorRect" parent="options/bg"]
+margin_left = -83.0
+margin_top = -130.0
+margin_right = 158.0
+margin_bottom = 585.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="options/bg"]
+margin_left = 641.0
+margin_top = -106.0
+margin_right = 882.0
+margin_bottom = 609.0
+rect_rotation = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="play" type="Node2D" parent="."]
+script = ExtResource( 8 )
